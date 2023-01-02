@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+int binSort(int ar[],int n){
+int start=0;
+int end=n-1;
+while(start < end) {
+
+        while(ar[start] == 0 &&start < end )  {
+            start++;
+        }
+
+        while(ar[end]==1 && start < end){
+           end--;
+        }
+
+    if(ar[start]==1&&ar[end]==0){
+        swap(ar[start],ar[end]);
+    start++;
+    end--;}
+}}
+void printArray(int arr[], int n)
+{
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;}
+
+int main(){
+    int a[8]={1,0,0,1,0,1,0,0};
+    
+binSort(a,8);
+
+printArray(a,8);
+return 0;
+}
